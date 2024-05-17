@@ -34,7 +34,147 @@
           </div>
         </div>
       </nav>
-
+<div class="bodycontent"> 
+    <h1 class="title text-center">
+        Contenido de clases
+    </h1>
+    <p>Un proyecto es una planificación secuencial de eventos con un objetivo definido, estableciendo tiempos de ejecución, costos,
+        responsabilidades y recursos
+         
+         
+        El programa MICROSOFT Project
+         
+        es un software de administración de proyectos, que permite la asignación de recursos a tareas, dar seguimiento al avance, 
+        administrar presupuesto
+         
+         
+         
+         
+         
+         
+         
+        git rm -- cached
+        que es staging
+        En el repositorio local hay tres dimenciones
+        Directorio 
+        Staging 
+        Repositorio (./git)
+        Cuando usamos el comando git add donde queda el 
+        archivo en preparado va a la dimencion staging esperando 
+        acomodarse en el repositorio.
+        
+        Git merge, sucede cuando tuenes varias ramas y cada una
+        tiene una actualizacion y esta actualizacion debe ir a la
+        rama principal para la version final
+             v1         v2          v3
+        MAin °----------°-----------°
+        Experimantal
+        Versión original
+         
+         
+        
+        Volver en el tiempo para los commit anteriores 
+        git log
+        
+        para poder retroceder entre los commit para esto debemos usar 
+        git reset, hay dos tipos de reset el duro y el suave 
+        si escribimos 
+        gir reset <archivo> --hard 
+        me va a devolver todos los archivos a commit seleccionado,
+        con 
+        git reset <archivo> --soft 
+        solamente va a retroceder a la version anterior pero todo
+        lo que tengas en staging va a quedar en staging si ya tenias
+        un add . para no perder tu actualizacion
+        
+        entonces modifiquemos un archivo html luego lo añadimos a 
+        staging con add adicional a eso lo volvemos a modificar 
+        y agregamos una carpeta llamada css  
+        ponemos git status
+        git diff te muestra los cambios de lo que tienens en staging 
+        versus lo que tienen en el repositorio
+        listo entonces para agregar todo y que git no se ponga loco
+        escribo git add . 
+        listo se agrego todo luego damos git status y ahi vemos los dos cambios 
+        Como a git no le importan si no los archivos guarda solo
+        los archivos y las carpetas como directorios y automaticamente
+        las crea
+         
+         
+         
+        Si quiero recuperar un archivo en especifico, escribo git checkout <commit> Nombre del archivo
+        esto me va a traer el archivo guardado en esa ultima versión pero no quedo guardado, solo lo muestra como modificado pero lo puedo volver a traer desde la ultima con el mismo comando solo que con el ultimo commit para dejarlo listo con git add si lo guardo en la nueva versión
+         
+        Git fetch me baja los archivos del repositorio remoto al repositorio local, git mrege me fuciona los archivos de repositorio local y el directorio 
+        git pull, ambos
+         
+        Cuando hago un merge es porque la rama cabecera se muere y se fuciona con la rama de producción
+         
+         
+        Conflictos Solucionar 
+        sintaxis del un conflicto
+         
+        <<<<<<<<<<<<<<<<<<< HEAD 
+                    Codigo que esta en el head 
+        =============
+                    Codigo que esta en la rama
+        >>>>>>>>>>>>>>>>>>>RAMA
+         
+         
+        Como solucionar el error 
+        la única forma de solucionar el conflicto es decidiendo que linea es la que vas a dejar, para eso visual Studio te muestra que versión dejar
+         
+         
+         
+         
+         
+        El sistema de cifrado para la seguridad civernetica se encarga de 
+        guardar la información secreta de un mensaje o de un archivo para poder desifrar este mensaje
+        se usa un método de dos llaves, una publica y una privada
+         
+        para poder compartir la llave publica es para compartir a cualquier persona del mundo, la llave privada no se puede compartir con absolutamente nadie.
+         
+        TE conectaste a Git y es segura por que es HTTPS pero la clave y el usuario, quedan guardado a tu pc y si pierdes el pc
+        un hacker puede crackear tu usuario y puedes ser hackeado para eso vamos a hacer un entorno mas fuerte
+         
+        En tu pc vas a crear una llave publica y una privada, y vas a conservar la llave publica a GitHub y le vas a decir que todo lo que te comparta lo va a compartir con esa llave publica el nombre de este protoclolo es seguriy share o SSH
+        al enviarle tu llave publica a git, git te va a enviar tu llave publica cifrada con tu llave publica por que git también tiene una llave privada
+         
+         
+        Para crear tus llaves, primero abre git Bach y revisa la configuración de tu remoto 
+        git config -l 
+        luego igresamos al directorio principal con cd o cd .
+        pwd para er si estamos en la principal 
+        luego escribes para grear la llave 
+        ssh-keygen -t rsa -b 4096 -C "Correo"
+        la T es para determinar que tipo de algoritmo vamos a usar 
+        rsa es el tipo de algoritmos 
+        luego nos sale generando la llave publica y privada y nos dice donde deseas que guardemos la llave ? 
+        y la idea es guardarla en la carpeta principal .directorioPrincipal/.ssh/id_rsa das Enter 
+        luego le pones una contraseña, pero por motivos del curso yo la voy a dejar sin contraseña tu puedes ponerle contrasela
+         
+        en la carpeta principal buscas el archivo llamado .ssh el id_rsa es la llave privada
+         
+        con esto no es suficiente, por que una vez tienes tu llave la vas a agregar al entorno 
+        para Windows y Linux
+         
+        eval $(ssh-agent - s)
+        el sistema te manda un código diferente 
+        se ta a sacar esto 
+        agent pid 174 
+        esto significa que el servido de ssh esta corriendo 
+        luego tienes que agregar la llave al servidor 
+        para esto vamos a usar ssh-add  
+        luego de aquí no voy a añadir la clave publica, si no la llave privada, la que no se puede mostrar
+         
+         
+        Git Remote add origin link
+        Git remote 
+        git remote -v
+        // para decir que la rama principal es main
+        git Branch -m main
+        git push origin main</p>
+</div>
     <div class="container"> 
     <div class="h1">Titulo Prubea</div>
     </div>
